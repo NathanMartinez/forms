@@ -1,5 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  background: rgb(15, 15, 15);
+}
+
+#main-container {
+  display: flex;
+  height: 65%;
+  width: 80%;
+  background: white;
+}
+
+form,
+#right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {}
+
+.social-media-div {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.social-icon-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 1rem;
+  border: 1px solid #000;
+  margin-bottom: 1rem;
+}
+
+.social-icon-div:hover {
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon-div:hover i {
+  font-size: 2rem;
+  transform: translateY(-20px);
+  color: rgb(0, 98, 255);
+  transition: all 0.3s ease-in-out;
+}
+
+i {
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+input {
+  padding: 1rem;
+  width: 75%;
+  border: none;
+  background: rgb(238, 238, 238);
+  margin: .5rem;
+}
+
+#right-container {
+  background: hsla(340, 80%, 69%, 1);
+  background: linear-gradient(90deg, hsla(340, 80%, 69%, 1) 0%, hsla(15, 93%, 71%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(340, 80%, 69%, 1) 0%, hsla(15, 93%, 71%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(340, 80%, 69%, 1) 0%, hsla(15, 93%, 71%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#EF709B", endColorstr="#FA9372", GradientType=1);
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  font-weight: 300;
+}
+
+button {
+  margin-top: 1rem;
+  border: none;
+  padding: .8rem 3rem;
+  border-radius: 2rem;
+  color: #fff;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+#login {
+  background: #F27C8E;
+}
+
+#signup {
+  background: transparent;
+  border: 1px solid #fff;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  #main-container {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  #main-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
 }
